@@ -3,32 +3,56 @@
     "name": "Gonzalo Fouillioux",
     "role": "Periodista deportivo (TVN / TNT Sports)",
     "tag": "TV",
-    "bio": "Destacado periodista deportivo nacional. Será parte del panel encargado de evaluar las competencias internacional y folclórica en la Quinta Vergara.",
-    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-3.jpg",
+    "bio": "Periodista deportivo de TVN y TNT Sports. Será parte del panel encargado de analizar las canciones en competencia y definir quién se llevará el premio.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-1.jpg",
     "links": []
   },
   {
     "name": "Carolina Urrejola",
-    "role": "Periodista y conductora de 24 Horas",
+    "role": "Periodista y conductora de 24 Horas Central",
     "tag": "TVN",
-    "bio": "Reconocida comunicadora con amplia trayectoria en radio y televisión. Su experiencia periodística aportará el criterio necesario para la evaluación de las canciones.",
-    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-4.jpg",
+    "bio": "Periodista y actual conductora de 24 Horas Central. Cuenta con una destacada trayectoria también en radio, aportando análisis y experiencia al jurado.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-2.jpg",
     "links": []
   },
   {
     "name": "Manuel Caro (\"Dunga\")",
-    "role": "Músico — Vocalista de La Combo Tortuga",
+    "role": "Músico — Vocalista y miembro fundador de La Combo Tortuga",
     "tag": "Música",
-    "bio": "Líder de una de las bandas de cumbia más populares de Chile. Aportará la visión técnica desde el escenario y la conexión con el público.",
-    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-2.jpg",
+    "bio": "Más conocido como “Dunga”, es vocalista y miembro fundador de la banda de cumbia La Combo Tortuga. Su experiencia en el mundo de la música aportará una mirada técnica al panel.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-3.jpg",
     "links": []
   },
   {
     "name": "Pablo Flamm",
     "role": "Periodista (Radio Bío Bío)",
     "tag": "Radio",
-    "bio": "Periodista de vasta trayectoria en medios radiales. Representa la voz de la radiodifusión en el panel de expertos de esta edición.",
-    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-1.jpg",
+    "bio": "Periodista multifacético de Radio Bío Bío. Fue considerado para evaluar a los participantes y aportar una mirada comunicacional y de criterio editorial.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-4.jpg",
+    "links": []
+  },
+  {
+    "name": "Milo J",
+    "role": "Periodista (Radio Bío Bío)",
+    "tag": "Radio",
+    "bio": "Periodista multifacético de Radio Bío Bío. Fue considerado para evaluar a los participantes y aportar una mirada comunicacional y de criterio editorial.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo.jpg",
+    "links": []
+  },
+   {
+    "name": "Juan Manuel Astorga",
+    "role": "Periodista (Radio Bío Bío)",
+    "tag": "Radio",
+    "bio": "Periodista multifacético de Radio Bío Bío. Fue considerado para evaluar a los participantes y aportar una mirada comunicacional y de criterio editorial.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-7.jpg",
+    "links": []
+  },
+  {
+    "name": "Sigrid Alegria",
+    "role": "Músico (Olmué) — Folclore",
+    "tag": "Folclore",
+    "bio": "Músico oriundo de Olmué con más de 20 años de experiencia en el folclore. Completa el panel del jurado aportando la cuota de experticia local y musical.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/02/El-Festival-de-Vina-2026-ya-tiene-jurado-confirmado-para-las-competencias-internacional-y-folclo-5.jpg",
     "links": []
   }
 ]
