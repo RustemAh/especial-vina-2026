@@ -4,55 +4,120 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Especial Viña 2026 | El Epicentro</title>
+  <meta name="description" content="Especial Viña 2026: últimas noticias, parrilla de artistas, jurado y competencias." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+
 <body>
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
   <header class="topbar">
     <div class="wrap topbar__inner">
       <div class="brand">
-        <span class="brand__dot"></span>
-        <span class="brand__name">EL EPICENTRO - VIÑA 2026</span>
+        <span class="brand__dot" aria-hidden="true"></span>
+        <span class="brand__name">ESPECIAL EL EPICENTRO - VIÑA 2026</span>
       </div>
-      <nav class="nav">
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#portada" class="nav__link">Portada</a>
         <a href="#noticias" class="nav__link">Noticias</a>
         <a href="#parrilla" class="nav__link">Parrilla</a>
         <a href="#jurado" class="nav__link">Jurado</a>
+        <a href="#competencia" class="nav__link">Competencia</a>
       </nav>
     </div>
   </header>
 
-  <main class="wrap main-layout">
-    <section id="noticias" class="section">
-      <h2 class="section__title">Últimas noticias</h2>
-      <div class="newsbox">
-        <ul id="newsList" class="newslist"></ul>
+  <main id="contenido">
+    
+    <section id="portada" class="hero">
+      <div class="wrap">
+        <div class="hero__banner">
+          <img
+            src="https://www.epicentrochile.com/wp-content/uploads/2026/02/karen-rafa.jpg"
+            alt="Banner Festival de Viña del Mar 2026"
+            loading="eager"
+          />
+        </div>
       </div>
     </section>
 
-    <aside id="parrilla" class="sidebar">
-      <h2 class="section__title">Programación Diaria</h2>
-      <div id="parrillaContainer" class="sidebar__content"></div>
-    </aside>
+    <div class="wrap main-layout">
+      
+      <section id="noticias" class="section">
+        <div class="section__head">
+          <h2 class="section__title">Últimas noticias</h2>
+        </div>
+
+        <div class="newsbox">
+          <ul id="newsList" class="newslist" aria-live="polite">
+            </ul>
+
+          <a class="newsbox__more"
+             href="https://www.epicentrochile.com/tag/vina2026/"
+             target="_blank" rel="noopener noreferrer">
+            Más noticias en EpicentroChile.com
+          </a>
+        </div>
+      </section>
+
+      <aside id="parrilla" class="sidebar">
+        <div class="section__head">
+          <h2 class="section__title">Programación Diaria</h2>
+        </div>
+        <div id="parrillaContainer" class="sidebar__content">
+          </div>
+      </aside>
+    </div>
+
+    <section id="jurado" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Jurado Internacional</h2>
+        </div>
+        <p class="section__desc">
+          Grandes figuras de la música y la televisión encargadas de evaluar la competencia en la Quinta Vergara.
+        </p>
+        <div id="grid" class="grid" aria-live="polite">
+          </div>
+      </div>
+    </section>
+
+    <section id="competencia" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Competencia</h2>
+        </div>
+        <div id="compGrid" class="grid" aria-live="polite">
+          </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <small>© <span id="year"></span> El Epicentro · Viña 2026</small>
+        <small>Cobertura especial desde Viña del Mar</small>
+      </div>
+    </footer>
   </main>
 
-  <section id="jurado" class="wrap section">
-    <h2 class="section__title">Jurado</h2>
-    <div id="grid" class="grid"></div>
-  </section>
-
   <div id="modal" class="modal" hidden>
-    <div class="modal__backdrop" id="closeModal"></div>
-    <div class="modal__panel">
+    <div class="modal__backdrop" id="closeModal" data-close></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" aria-label="Cerrar" id="btnCerrarModal" data-close>×</button>
+
       <div class="modal__content">
-        <img id="modalImg" src="" class="modal__img" />
+        <img id="modalImg" class="modal__img" alt="" />
         <div>
-          <h3 id="modalTitle"></h3>
-          <p id="modalBio"></p>
+          <h3 id="modalTitle" class="modal__title"></h3>
+          <p id="modalRole" class="modal__role"></p>
+          <p id="modalBio" class="modal__bio"></p>
+          <p id="modalLinks" class="modal__links"></p>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="assets/js/app.js"></script>
+  <script src="assets/js/app.js" defer></script>
 </body>
 </html>
