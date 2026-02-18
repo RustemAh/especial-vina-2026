@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Especial Viña 2026 | El Epicentro</title>
-  <meta name="description" content="Especial Viña 2026: noticias, parrilla de artistas, jurado y competencias." />
+  <meta name="description" content="Especial Viña 2026: últimas noticias, programación diaria, jurado y competencias." />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
@@ -17,7 +17,9 @@
         <span class="brand__dot" aria-hidden="true"></span>
         <span class="brand__name">ESPECIAL EL EPICENTRO - VIÑA 2026</span>
       </div>
-      <nav class="nav">
+
+      <nav class="nav" aria-label="Principal">
+        <a href="#portada" class="nav__link">Portada</a>
         <a href="#noticias" class="nav__link">Noticias</a>
         <a href="#parrilla" class="nav__link">Parrilla</a>
         <a href="#jurado" class="nav__link">Jurado</a>
@@ -27,33 +29,46 @@
   </header>
 
   <main id="contenido">
+    
     <section id="portada" class="hero">
       <div class="wrap">
         <div class="hero__banner">
-          <img src="https://www.epicentrochile.com/wp-content/uploads/2026/02/karen-rafa.jpg" alt="Viña 2026">
+          <img
+            src="https://www.epicentrochile.com/wp-content/uploads/2026/02/karen-rafa.jpg"
+            alt="Banner Festival de Viña del Mar 2026"
+            loading="eager"
+          />
         </div>
       </div>
     </section>
 
-   <section id="parrilla" class="section-parrilla">
-  <div class="wrap">
-    <div class="section__head">
-      <h2 class="section__title">Programación por Días</h2>
-    </div>
-    <div id="parrillaContainer" class="calendario-festival">
-      <p class="note">Organizando los días del festival...</p>
-    </div>
-  </div>
-</section>
+    <section id="parrilla" class="section">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title">Programación por Días</h2>
+        </div>
+        <div id="parrillaContainer" class="calendario-festival">
+          <p class="note">Cargando la programación oficial...</p>
+        </div>
+      </div>
+    </section>
 
     <section id="noticias" class="section">
       <div class="wrap">
         <div class="section__head">
           <h2 class="section__title">Últimas noticias</h2>
         </div>
+
         <div class="newsbox">
-          <ul id="newsList" class="newslist"></ul>
-          <a class="newsbox__more" href="https://www.epicentrochile.com/tag/vina2026/" target="_blank">Más noticias en EpicentroChile.com</a>
+          <ul id="newsList" class="newslist" aria-live="polite">
+            <li class="newsitem">Sincronizando con la sala de prensa...</li>
+          </ul>
+
+          <a class="newsbox__more"
+             href="https://www.epicentrochile.com/tag/vina2026/"
+             target="_blank" rel="noopener noreferrer">
+            Más noticias en EpicentroChile.com
+          </a>
         </div>
       </div>
     </section>
@@ -61,9 +76,10 @@
     <section id="jurado" class="section">
       <div class="wrap">
         <div class="section__head">
-          <h2 class="section__title">Jurado</h2>
+          <h2 class="section__title">Jurado Internacional</h2>
         </div>
-        <div id="grid" class="grid"></div>
+        <div id="grid" class="grid" aria-live="polite">
+          </div>
       </div>
     </section>
 
@@ -72,17 +88,26 @@
         <div class="section__head">
           <h2 class="section__title">Competencia</h2>
         </div>
-        <div id="compGrid" class="grid"></div>
+        <div id="compGrid" class="grid" aria-live="polite">
+          </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="wrap footer__inner">
+        <small>© <span id="year">2026</span> El Epicentro · Viña 2026</small>
+        <small>Valparaíso - Viña del Mar, Chile</small>
+      </div>
+    </footer>
   </main>
 
-  <div id="modal" class="modal" hidden>
+  <div id="modal" class="modal">
     <div class="modal__backdrop" id="closeModal"></div>
-    <div class="modal__panel">
-      <button class="modal__close" id="btnCerrar" type="button">×</button>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal__close" type="button" aria-label="Cerrar" id="btnCerrarModal">×</button>
+
       <div class="modal__content">
-        <img id="modalImg" class="modal__img" src="" />
+        <img id="modalImg" class="modal__img" alt="Foto del jurado" />
         <div>
           <h3 id="modalTitle" class="modal__title"></h3>
           <p id="modalBio" class="modal__bio"></p>
@@ -94,3 +119,4 @@
   <script src="assets/js/app.js" defer></script>
 </body>
 </html>
+
