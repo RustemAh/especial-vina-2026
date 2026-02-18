@@ -56,3 +56,29 @@ window.showJurado = (i) => {
 document.getElementById('closeModal').onclick = () => document.getElementById('modal').hidden = true;
 
 init();
+
+/* --- CARGAR COMPETENCIA --- */
+async function loadCompetencia() {
+    const grid = document.getElementById('compGrid');
+    if (!grid) return;
+    try {
+        const r = await fetch('assets/data/competencia.json');
+        const data = await r.json();
+        grid.innerHTML = data.map((c, idx) => `
+            <article class="card card--comp" style="background: #0b2a5b; color: white; padding: 15px; border-radius: 12px;">
+                <div class="card__body">
+                    <span class="badge" style="background: rgba(255,255,255,0.2); padding: 4px 8px; border-radius: 10px; font-size: 11px;">#${idx + 1}</span>
+                    <h3 class="card__name" style="margin: 10px 0 5px; font-size: 16px;">${c.song}</h3>
+                    <p class="card__role" style="font-size: 13px; opacity: 0.9;"><strong>Intérprete:</strong> ${c.performer}</p>
+                    <p class="card__role" style="font-size: 13px; opacity: 0.9;"><strong>País:</strong> ${c.represented_by}</p>
+                </div>
+            </article>
+        `).join("");
+    } catch (e) { console.error("Error competencia:", e); }
+}
+
+// Y no olvides llamarla en tu DOMContentLoaded
+document.addEventListener("DOMContentLoaded", () => {
+    loadCompetencia(); 
+    // ... tus otras llamadas
+});
