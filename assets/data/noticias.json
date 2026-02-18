@@ -1,1 +1,25 @@
-
+{
+  "source": "https://www.epicentrochile.com/tag/vina2026/",
+  "mode": "manual-init",
+  "items": [
+    {
+      "title": "Karen Doggenweiler y Rafael Araneda: La dupla que liderará Viña 2026",
+      "url": "https://www.epicentrochile.com",
+      "date": "2026-02-17",
+      "excerpt": "Los animadores ya se preparan para enfrentar al 'Monstruo' de la Quinta Vergara en la próxima edición del certamen."
+    },
+    {
+      "title": "Viña 2026: Estos son los primeros artistas confirmados para la parrilla",
+      "url": "https://www.epicentrochile.com",
+      "date": "2026-02-16",
+      "excerpt": "Grandes nombres de la música internacional y el humor nacional comienzan a sonar fuerte para febrero."
+    },
+    {
+      "title": "Epicentro Chile transmitirá un especial diario desde el Hotel O'Higgins",
+      "url": "https://www.epicentrochile.com",
+      "date": "2026-02-15",
+      "excerpt": "Toda la trastienda del festival más importante de Latinoamérica la vivirás a través de nuestras plataformas."
+    }
+  ],
+  "generated_at": "2026-02-18T00:00:00Z"
+}
