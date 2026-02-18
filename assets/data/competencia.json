@@ -1,1 +1,32 @@
-
+[
+  {
+    "song": "Bajo el cielo de Valparaíso",
+    "performer": "Dúo Raíces",
+    "represented_by": "Chile - Folclórica",
+    "status": "Participante"
+  },
+  {
+    "song": "Ritmo del Mar",
+    "performer": "Luz Marina",
+    "represented_by": "Colombia - Internacional",
+    "status": "Favorito"
+  },
+  {
+    "song": "Cordillera Eterna",
+    "performer": "Altiplano Fusión",
+    "represented_by": "Bolivia - Folclórica",
+    "status": "Participante"
+  },
+  {
+    "song": "Neon Nights",
+    "performer": "Modern Beats",
+    "represented_by": "USA - Internacional",
+    "status": "Participante"
+  },
+  {
+    "song": "Tierra de Fuego",
+    "performer": "Los Australes",
+    "represented_by": "Argentina - Folclórica",
+    "status": "Semifinalista"
+  }
+]
