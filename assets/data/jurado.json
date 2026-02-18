@@ -1,1 +1,34 @@
-
+[
+  {
+    "name": "Gonzalo Fouillioux",
+    "role": "Periodista deportivo (TVN / TNT Sports)",
+    "tag": "TV",
+    "bio": "Destacado periodista deportivo nacional. Será parte del panel encargado de evaluar las competencias internacional y folclórica en la Quinta Vergara.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-3.jpg",
+    "links": []
+  },
+  {
+    "name": "Carolina Urrejola",
+    "role": "Periodista y conductora de 24 Horas",
+    "tag": "TVN",
+    "bio": "Reconocida comunicadora con amplia trayectoria en radio y televisión. Su experiencia periodística aportará el criterio necesario para la evaluación de las canciones.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-4.jpg",
+    "links": []
+  },
+  {
+    "name": "Manuel Caro (\"Dunga\")",
+    "role": "Músico — Vocalista de La Combo Tortuga",
+    "tag": "Música",
+    "bio": "Líder de una de las bandas de cumbia más populares de Chile. Aportará la visión técnica desde el escenario y la conexión con el público.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-2.jpg",
+    "links": []
+  },
+  {
+    "name": "Pablo Flamm",
+    "role": "Periodista (Radio Bío Bío)",
+    "tag": "Radio",
+    "bio": "Periodista de vasta trayectoria en medios radiales. Representa la voz de la radiodifusión en el panel de expertos de esta edición.",
+    "photo": "https://www.epicentrochile.com/wp-content/uploads/2026/01/¡Conoce-al-tremendo-jurado-de-este-Festival-de-Olmue-2026-✨@carolaurrejolatv-@gonzalofullu-@d-1.jpg",
+    "links": []
+  }
+]
