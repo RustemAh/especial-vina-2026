@@ -1,24 +1,91 @@
 :root {
-  --magenta: #e6007e; --naranja: #ff6600;
-  --bg: #f3f4f6; --surface: #ffffff;
-  --gradient: linear-gradient(135deg, var(--magenta), var(--naranja));
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --accent: #e6007e; /* Magenta Epicentro */
+  --accent-alt: #ff6600; /* Naranja Epicentro */
+  --radius: 12px;
+  --shadow: 0 8px 18px rgba(17,24,39,.08);
+  --gradient: linear-gradient(135deg, #e6007e, #ff6600);
 }
-body { font-family: system-ui; background: var(--bg); margin: 0; }
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
-.topbar { background: var(--surface); border-top: 5px solid var(--magenta); position: sticky; top: 0; z-index: 50; padding: 10px 0; }
-.brand__dot { width: 12px; height: 12px; background: var(--gradient); border-radius: 50%; display: inline-block; }
-.main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 30px; padding-top: 20px; }
-.section__title { font-size: 18px; border-bottom: 3px solid var(--magenta); display: inline-block; margin-bottom: 15px; }
-.newsbox { background: white; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); overflow: hidden; }
-.newsitem { padding: 12px; border-bottom: 1px solid #eee; list-style: none; }
-.newsitem a { text-decoration: none; color: #111; font-weight: bold; }
-.sidebar__content { background: white; padding: 15px; border-radius: 12px; border-top: 4px solid var(--naranja); }
-.sidebar-day { font-size: 12px; color: var(--magenta); font-weight: 800; margin: 10px 0; }
-.sidebar-artist { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; font-size: 14px; font-weight: 600; }
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap{ max-width: 1020px; margin: 0 auto; padding: 0 16px; }
+
+/* Header */
+.topbar{
+  position: sticky; top: 0; z-index: 50;
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+}
+.topbar__inner{ display:flex; align-items:center; justify-content:space-between; min-height: 58px; }
+.brand{ display:flex; align-items:center; gap:10px; font-weight:800; }
+.brand__dot{ width:12px; height:12px; border-radius:50%; background: var(--gradient); }
+
+.nav{ display:flex; gap:14px; }
+.nav__link{ color: var(--muted); text-decoration:none; font-weight: 700; font-size: 14px; }
+.nav__link:hover{ color: var(--accent); }
+
+/* Layout */
+.main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 30px; padding: 20px 0; }
+
+/* Noticias & Parrilla */
+.newsbox, .sidebar__content { 
+  background: var(--surface); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent-alt);
+  overflow: hidden;
+}
+.newsitem { padding: 12px; border-bottom: 1px solid var(--line); list-style: none; }
+.newsitem a { text-decoration: none; color: var(--text); font-weight: 700; font-size: 14px; }
+
+.sidebar-day { background: #f9fafb; padding: 5px 10px; font-size: 12px; font-weight: 800; color: var(--accent); margin: 10px 0; }
+.sidebar-artist { display: flex; align-items: center; gap: 10px; padding: 8px 15px; }
 .sidebar-artist img { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
-.modal { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; z-index: 100; }
-.modal__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-.modal__panel { background: white; padding: 20px; border-radius: 15px; position: relative; width: 90%; max-width: 600px; }
+
+/* Grid Jurado */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.card { background: white; border-radius: 12px; border: 1px solid var(--line); overflow: hidden; cursor: pointer; }
+.card img { width: 100%; height: 220px; object-fit: cover; }
+.card__body { padding: 12px; }
+
+/* === CORRECCIÓN DEL MODAL (BARRA BLANCA) === */
+.modal { 
+  position: fixed; 
+  inset: 0; 
+  z-index: 9999; 
+  display: none; /* ESTO OCULTA LA BARRA BLANCA POR DEFECTO */
+  align-items: center; 
+  justify-content: center; 
+  background: rgba(0,0,0,0.7); 
+}
+.modal.is-active { display: flex !important; } /* Solo se ve cuando el JS lo activa */
+
+.modal__panel { 
+  background: white; 
+  border-radius: 15px; 
+  width: 90%; 
+  max-width: 600px; 
+  position: relative; 
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
 .modal__content { display: grid; grid-template-columns: 200px 1fr; gap: 20px; }
 .modal__img { width: 100%; border-radius: 10px; }
+
+@media (max-width: 768px) {
+  .main-layout { grid-template-columns: 1fr; }
+  .modal__content { grid-template-columns: 1fr; }
+}
