@@ -1,32 +1,86 @@
 [
   {
-    "song": "Bajo el cielo de Valparaíso",
-    "performer": "Dúo Raíces",
-    "represented_by": "Chile - Folclórica",
+    "category": "Internacional",
+    "country": "Chile",
+    "performer": "Sondelvalle",
+    "song": "El Ciclo",
     "status": "Participante"
   },
   {
-    "song": "Ritmo del Mar",
-    "performer": "Luz Marina",
-    "represented_by": "Colombia - Internacional",
-    "status": "Favorito"
-  },
-  {
-    "song": "Cordillera Eterna",
-    "performer": "Altiplano Fusión",
-    "represented_by": "Bolivia - Folclórica",
+    "category": "Internacional",
+    "country": "España",
+    "performer": "Antoñito Molina",
+    "song": "Me Prometo",
     "status": "Participante"
   },
   {
-    "song": "Neon Nights",
-    "performer": "Modern Beats",
-    "represented_by": "USA - Internacional",
+    "category": "Internacional",
+    "country": "Estonia",
+    "performer": "Vanilla Ninja",
+    "song": "Are You Ready to Go",
     "status": "Participante"
   },
   {
-    "song": "Tierra de Fuego",
-    "performer": "Los Australes",
-    "represented_by": "Argentina - Folclórica",
-    "status": "Semifinalista"
+    "category": "Internacional",
+    "country": "Italia",
+    "performer": "Chiara Grispo",
+    "song": "Grazie A(d)dio",
+    "status": "Participante"
+  },
+  {
+    "category": "Internacional",
+    "country": "México",
+    "performer": "TREX",
+    "song": "Ruta Correcta",
+    "status": "Participante"
+  },
+  {
+    "category": "Internacional",
+    "country": "Rep. Dominicana",
+    "performer": "Johnny Sky",
+    "song": "Call on Me",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "Argentina",
+    "performer": "Campedrinos",
+    "song": "La Zamba",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "Chile",
+    "performer": "A los 4 Vientos",
+    "song": "Valoración",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "Colombia",
+    "performer": "Rebolú",
+    "song": "Los Herederos",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "Ecuador",
+    "performer": "Brenda",
+    "song": "Capullito",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "España",
+    "performer": "María Peláe",
+    "song": "Que vengan a por mí",
+    "status": "Participante"
+  },
+  {
+    "category": "Folclórica",
+    "country": "México",
+    "performer": "Majo Cornejo",
+    "song": "Ningún color tiene dueño",
+    "status": "Participante"
   }
 ]
