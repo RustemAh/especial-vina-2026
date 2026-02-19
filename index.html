@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -20,7 +20,7 @@
       <nav class="nav">
         <a href="#noticias" class="nav__link">Noticias</a>
         <a href="#parrilla" class="nav__link">Parrilla</a>
-        <a href="#jurado" class="nav__link">Jurado</a>
+        <a href="#votacion" class="nav__link">Votación</a>
         <a href="#competencia" class="nav__link">Competencia</a>
       </nav>
     </div>
@@ -35,59 +35,53 @@
       <h2 class="section__title">Programación Oficial</h2>
       <div id="tabsNav" class="tabs-nav"></div>
       <div id="tabContent" class="tabs-grid">
-        <p class="loading">Cargando programación...</p>
+        <p class="loading">Sincronizando parrilla...</p>
       </div>
     </section>
 
     <section id="noticias" class="section">
-      <h2 class="section__title">Últimas Noticias</h2>
+      <h2 class="section__title">Sala de Prensa</h2>
       <div class="newsbox">
         <ul id="newsList" class="newslist">
-          <li class="loading">Sincronizando con sala de prensa...</li>
+          <li class="loading">Cargando últimas notas...</li>
         </ul>
       </div>
     </section>
 
-    <section id="jurado" class="section">
-      <h2 class="section__title">Jurado</h2>
-      <div id="grid" class="grid-jurado">
-        <p class="loading">Cargando jurado...</p>
+    <section id="votacion" class="section">
+      <h2 class="section__title">Termómetro del Monstruo</h2>
+      <div class="poll-grid">
+        <div class="poll-container">
+          <div class="strawpoll-embed" id="strawpoll_mpnb1Nw7Gy5" style="height: 550px; width: 100%; display: flex; flex-direction: column;">
+            <iframe title="StrawPoll Embed" id="strawpoll_iframe_mpnb1Nw7Gy5" src="https://strawpoll.com/embed/mpnb1Nw7Gy5" style="width: 100%; flex-grow: 1; border: none;" allowfullscreen allowtransparency>Cargando encuesta...</iframe>
+          </div>
+        </div>
+        <div class="poll-container">
+          <div class="strawpoll-embed" id="strawpoll_e7ZJadkmLg3" style="height: 550px; width: 100%; display: flex; flex-direction: column;">
+            <iframe title="StrawPoll Embed" id="strawpoll_iframe_e7ZJadkmLg3" src="https://strawpoll.com/embed/e7ZJadkmLg3" style="width: 100%; flex-grow: 1; border: none;" allowfullscreen allowtransparency>Cargando encuesta...</iframe>
+          </div>
+        </div>
       </div>
+    </section>
+
+    <section id="jurado" class="section">
+      <h2 class="section__title">El Jurado</h2>
+      <div id="grid" class="grid-jurado"></div>
     </section>
 
     <section id="competencia" class="section">
       <h2 class="section__title">Competencia</h2>
-      <div id="compGrid" class="grid-jurado">
-        <p class="loading">Cargando participantes...</p>
-      </div>
+      <div id="compGrid" class="grid-jurado"></div>
     </section>
   </main>
-
-  <section id="votacion" class="section">
-  <div class="wrap">
-    <h2 class="section__title">Termómetro del Monstruo</h2>
-    <p style="color: var(--muted); margin-top: -20px; margin-bottom: 25px;">
-      ¿Quién fue el mejor artista de la última jornada? ¡Vota y mide el pulso de la Quinta!
-    </p>
-    
-    <div class="poll-container">
-      <div class="strawpoll-embed" id="strawpoll_mpnb1Nw7Gy5" style="height: 772px; max-width: 640px; width: 100%; margin: 0 auto; display: flex; flex-direction: column;">
-        <iframe title="StrawPoll Embed" id="strawpoll_iframe_mpnb1Nw7Gy5" src="https://strawpoll.com/embed/mpnb1Nw7Gy5" style="position: static; visibility: visible; display: block; width: 100%; flex-grow: 1; border: none;" allowfullscreen allowtransparency>
-          Loading...
-        </iframe>
-        <script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
-      </div>
-    </div>
-  </div>
-</section>
 
   <div class="radio-bar">
     <div class="wrap radio-bar__inner">
       <div class="radio-info">
         <span class="live-dot"></span>
-        <strong>EPICENTRO RADIO</strong> | <small>En Vivo desde Viña</small>
+        <strong>EPICENTRO RADIO</strong> | <small>En Vivo</small>
       </div>
-      <button onclick="window.open('https://www.epicentroradio.com/?radio_player=1/', '_blank')" class="radio-btn">▶ ESCUCHAR</button>
+      <button onclick="window.open('https://epicentrochile.com/radio', '_blank')" class="radio-btn">▶ ESCUCHAR</button>
     </div>
   </div>
 
@@ -95,9 +89,9 @@
     <div class="modal__panel">
       <button class="modal__close" onclick="closeModal()">×</button>
       <div class="modal__content">
-        <img id="modalImg" src="" alt="Foto" />
+        <img id="modalImg" class="modal__img" src="" alt="Foto" />
         <div>
-          <h3 id="modalTitle"></h3>
+          <h3 id="modalTitle" class="modal__title"></h3>
           <p id="modalBio"></p>
         </div>
       </div>
@@ -105,5 +99,6 @@
   </div>
 
   <script src="assets/js/app.js" defer></script>
+  <script async src="https://cdn.strawpoll.com/dist/widgets.js" charset="utf-8"></script>
 </body>
 </html>
