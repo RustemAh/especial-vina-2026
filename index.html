@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -18,9 +18,10 @@
         <span class="brand__name">EL EPICENTRO · VIÑA 2026</span>
       </div>
       <nav class="nav">
-        <a href="#noticias" class="nav__link">NOTICIAS</a>
-        <a href="#parrilla" class="nav__link">PARRILLA</a>
-        <a href="#jurado" class="nav__link">JURADO</a>
+        <a href="#noticias" class="nav__link">Noticias</a>
+        <a href="#parrilla" class="nav__link">Parrilla</a>
+        <a href="#jurado" class="nav__link">Jurado</a>
+        <a href="#competencia" class="nav__link">Competencia</a>
       </nav>
     </div>
   </header>
@@ -34,7 +35,7 @@
       <h2 class="section__title">Programación Oficial</h2>
       <div id="tabsNav" class="tabs-nav"></div>
       <div id="tabContent" class="tabs-grid">
-        <p class="loading">Sincronizando parrilla...</p>
+        <p class="loading">Cargando programación...</p>
       </div>
     </section>
 
@@ -42,14 +43,23 @@
       <h2 class="section__title">Últimas Noticias</h2>
       <div class="newsbox">
         <ul id="newsList" class="newslist">
-          <li class="loading">Conectando con la sala de prensa...</li>
+          <li class="loading">Sincronizando con sala de prensa...</li>
         </ul>
       </div>
     </section>
 
     <section id="jurado" class="section">
       <h2 class="section__title">Jurado</h2>
-      <div id="grid" class="grid-jurado"></div>
+      <div id="grid" class="grid-jurado">
+        <p class="loading">Cargando jurado...</p>
+      </div>
+    </section>
+
+    <section id="competencia" class="section">
+      <h2 class="section__title">Competencia</h2>
+      <div id="compGrid" class="grid-jurado">
+        <p class="loading">Cargando participantes...</p>
+      </div>
     </section>
   </main>
 
@@ -57,9 +67,9 @@
     <div class="wrap radio-bar__inner">
       <div class="radio-info">
         <span class="live-dot"></span>
-        <strong>EPICENTRO RADIO</strong> | <small>Especial Viña</small>
+        <strong>EPICENTRO RADIO</strong> | <small>En Vivo desde Viña</small>
       </div>
-      <button onclick="toggleRadio()" id="radioBtn" class="radio-btn">▶ ESCUCHAR VIVO</button>
+      <button onclick="window.open('https://epicentrochile.com/radio', '_blank')" class="radio-btn">▶ ESCUCHAR</button>
     </div>
   </div>
 
@@ -67,7 +77,7 @@
     <div class="modal__panel">
       <button class="modal__close" onclick="closeModal()">×</button>
       <div class="modal__content">
-        <img id="modalImg" src="" alt="" />
+        <img id="modalImg" src="" alt="Foto" />
         <div>
           <h3 id="modalTitle"></h3>
           <p id="modalBio"></p>
