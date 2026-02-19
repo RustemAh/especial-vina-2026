@@ -1,25 +1,37 @@
 {
   "source": "https://www.epicentrochile.com/tag/vina2026/",
-  "mode": "manual-init",
+  "mode": "wp-api",
+  "generated_at": "2026-02-19T02:56:05.756309+00:00",
   "items": [
     {
-      "title": "Karen Doggenweiler y Rafael Araneda: La dupla que liderará Viña 2026",
-      "url": "https://www.epicentrochile.com",
-      "date": "2026-02-17",
-      "excerpt": "Los animadores ya se preparan para enfrentar al 'Monstruo' de la Quinta Vergara en la próxima edición del certamen."
+      "title": "Parrilla Festival de Viña 2026: Revisa la programación por día y los artistas que abren este domingo",
+      "url": "https://www.epicentrochile.com/2026/02/17/parrilla-festival-de-vina-2026-revisa-la-programacion-por-dia-y-los-artistas-que-abren-este-domingo/",
+      "date": "2026-02-17T09:00:13",
+      "excerpt": "El “Monstruo” despierta este domingo 22 con una noche inaugural cargada de historia y ritmo latino...."
     },
     {
-      "title": "Viña 2026: Estos son los primeros artistas confirmados para la parrilla",
-      "url": "https://www.epicentrochile.com",
-      "date": "2026-02-16",
-      "excerpt": "Grandes nombres de la música internacional y el humor nacional comienzan a sonar fuerte para febrero."
+      "title": "Estos son los 8 integrantes del jurado y los coanimadores del Festival de Viña 2026",
+      "url": "https://www.epicentrochile.com/2026/02/06/estos-son-los-8-integrantes-del-jurado-y-los-coanimadores-del-festival-de-vina-2026/",
+      "date": "2026-02-06T14:32:49",
+      "excerpt": "La organización del certamen reveló los ocho nombres que evaluarán las competencias. La nómina incluye una mezcla de ópera, trap, periodismo y actuación. Además..."
     },
     {
-      "title": "Epicentro Chile transmitirá un especial diario desde el Hotel O'Higgins",
-      "url": "https://www.epicentrochile.com",
-      "date": "2026-02-15",
-      "excerpt": "Toda la trastienda del festival más importante de Latinoamérica la vivirás a través de nuestras plataformas."
+      "title": "La “prueba de fuego” antes de la Quinta: Rodrigo Villegas testeará su rutina para el Festival de Viña en el Casino Enjoy",
+      "url": "https://www.epicentrochile.com/2026/01/11/la-prueba-de-fuego-antes-de-la-quinta-rodrigo-villegas-testeara-su-rutina-para-el-festival-de-vina-en-el-casino-enjoy/",
+      "date": "2026-01-11T11:16:33",
+      "excerpt": "Si no quieres esperar hasta febrero para reírte, esta es tu oportunidad. Rodrigo Villegas se presentará este fin de semana en el Casino de Viña del Mar con una ..."
+    },
+    {
+      "title": "Estos son los humoristas confirmados para el Festival de Viña 2026",
+      "url": "https://www.epicentrochile.com/2026/01/05/estos-son-los-humoristas-confirmados-para-el-festival-de-vina-2026/",
+      "date": "2026-01-05T13:41:51",
+      "excerpt": "El certamen anunció oficialmente a los comediantes que se presentarán durante las seis noches del evento...."
+    },
+    {
+      "title": "Festival de Viña 2026: Confirman fechas del evento y Gala",
+      "url": "https://www.epicentrochile.com/2025/03/14/festival-de-vina-2026-confirman-fechas-del-evento-y-gala/",
+      "date": "2025-03-14T17:09:06",
+      "excerpt": "La alcaldesa Macarena Ripamonti destacó el éxito del Festival de Viña 2025 y adelantó que la próxima edición mantendrá la diversidad musical como eje central...."
     }
-  ],
-  "generated_at": "2026-02-18T00:00:00Z"
+  ]
 }
