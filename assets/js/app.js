@@ -64,19 +64,42 @@ async function initNews() {
   const list = $("#newsList");
   if (!list) return;
 
-  try {
-    const resp = await fetch(`${CONFIG.NEWS}?v=${Date.now()}`);
-    const data = await resp.json();
-    
-    list.innerHTML = data.items.slice(0, 5).map(n => `
-      <li class="news-item">
-        <a href="${n.url}" target="_blank">${n.title}</a>
-        <p>${n.excerpt || ''}</p>
-      </li>
-    `).join('');
-  } catch (e) {
-    list.innerHTML = "<li>Noticias actualizándose...</li>";
+  // Intentamos varias rutas por si el sitio está en un subdirectorio
+  const paths = [
+    'assets/data/noticias.json',
+    './assets/data/noticias.json',
+    '../assets/data/noticias.json'
+  ];
+
+  for (let path of paths) {
+    try {
+      console.log(`Intentando cargar noticias desde: ${path}`);
+      const resp = await fetch(`${path}?t=${Date.now()}`);
+      
+      if (resp.ok) {
+        const data = await resp.json();
+        console.log("¡Noticias cargadas con éxito!", data);
+        
+        if (!data.items || data.items.length === 0) {
+          list.innerHTML = "<li>No hay noticias recientes con el tag #vina2026.</li>";
+          return;
+        }
+
+        list.innerHTML = data.items.slice(0, 6).map(n => `
+          <li class="news-item">
+            <a href="${n.url}" target="_blank" rel="noopener noreferrer">${n.title}</a>
+            <p>${n.excerpt || 'Haz clic para leer más sobre esta noticia del Festival.'}</p>
+          </li>
+        `).join('');
+        return; // Salimos del bucle si logramos cargar
+      }
+    } catch (e) {
+      console.warn(`Fallo en ruta ${path}:`, e);
+    }
   }
+
+  // Si llegamos aquí, nada funcionó
+  list.innerHTML = "<li class='newsitem'>Error al conectar con la sala de prensa. Revisa la consola (F12).</li>";
 }
 
 // 3. CARGAR JURADO
