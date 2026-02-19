@@ -1,5 +1,5 @@
 /* ==========================================================================
-   ESPECIAL VIÑA 2026 - DISEÑO FINAL REFORZADO (FORMATO DERECHA)
+   ESPECIAL VIÑA 2026 - DISEÑO FINAL REFORZADO (MODO OSCURO + FIX MÓVIL)
    ========================================================================== */
 
 :root {
@@ -13,7 +13,7 @@
   --muted: #6b7280;
   --line: #262c36;
   --shadow: 0 8px 30px rgba(0,0,0,0.6);
-  --radius: 16px; /* Bordes más redondeados según la referencia */
+  --radius: 16px;
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
@@ -26,9 +26,17 @@ body {
   color: var(--text); 
   line-height: 1.6;
   padding-bottom: 100px;
+  /* Evita el scroll horizontal en toda la página */
+  overflow-x: hidden; 
 }
 
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 16px; }
+/* Contenedor principal corregido */
+.wrap { 
+  max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 0 16px; 
+  width: 100%;
+}
 
 /* --- HEADER / TOPBAR --- */
 .topbar { 
@@ -49,6 +57,20 @@ body {
 .nav__link { text-decoration: none; color: var(--muted); font-weight: 700; font-size: 12px; text-transform: uppercase; transition: 0.3s; }
 .nav__link:hover { color: var(--magenta); }
 
+/* --- HERO (CORRECCIÓN LOGO MÓVIL) --- */
+.hero { padding: 25px 0; text-align: center; }
+.hero__img { 
+  width: 100%;       /* Ocupa el ancho del contenedor */
+  max-width: 100%;   /* No permite scroll horizontal */
+  height: auto;      /* Mantiene proporción */
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  display: block; 
+  filter: brightness(0.9); 
+  transition: 0.5s; 
+}
+.hero__img:hover { filter: brightness(1.1); }
+
 /* --- SECCIONES --- */
 .section { padding: 40px 0; }
 .section__title { 
@@ -56,7 +78,7 @@ body {
   padding-left: 15px; margin-bottom: 25px; color: var(--dark); text-transform: uppercase;
 }
 
-/* --- TABS (FORMATO "DERECHA" - PASTILLAS) --- */
+/* --- TABS (FORMATO PASTILLAS REDONDEADAS) --- */
 .tabs-nav { 
   display: flex; gap: 12px; overflow-x: auto; padding: 10px 5px 25px 5px; 
   margin-bottom: 10px; scrollbar-width: none; 
@@ -64,10 +86,10 @@ body {
 .tabs-nav::-webkit-scrollbar { display: none; }
 
 .tab-btn { 
-  background: #1a1d23; /* Gris oscuro sutil */
+  background: #1a1d23; 
   border: 1px solid #2d323b; 
   padding: 10px 24px; 
-  border-radius: 50px; /* Redondeado total */
+  border-radius: 50px; 
   cursor: pointer; 
   font-weight: 700; 
   font-size: 13px;
@@ -80,7 +102,7 @@ body {
   background: var(--magenta); 
   color: white; 
   border-color: var(--magenta); 
-  box-shadow: 0 4px 15px rgba(255, 0, 138, 0.5); /* Resalte neón */
+  box-shadow: 0 4px 15px rgba(255, 0, 138, 0.5); 
 }
 
 /* --- GRIDS Y CARDS --- */
@@ -107,7 +129,6 @@ body {
   background: var(--surface); padding: 20px; margin-bottom: 15px; border-radius: var(--radius);
   border: 1px solid var(--line); border-left: 5px solid var(--magenta); transition: 0.3s;
 }
-.news-item:hover { background: var(--surface-hover); transform: scale(1.01); }
 .news-item a { color: var(--magenta); font-weight: 800; text-decoration: none; font-size: 1.1rem; display: block; margin-bottom: 8px; }
 .news-item p { margin: 0; font-size: 14px; color: var(--text); }
 
@@ -122,7 +143,6 @@ body {
 .radio-bar {
   position: fixed; bottom: 0; left: 0; width: 100%; background: #000;
   color: white; padding: 20px 0; border-top: 2px solid var(--magenta); z-index: 2000;
-  box-shadow: 0 -10px 30px rgba(0,0,0,0.8);
 }
 .radio-bar__inner { display: flex; justify-content: space-between; align-items: center; }
 .live-dot { width: 10px; height: 10px; background: #ff0000; border-radius: 50%; display: inline-block; box-shadow: 0 0 10px #ff0000; animation: blink 1.2s infinite; }
@@ -132,23 +152,13 @@ body {
   background: var(--magenta); color: white; border: none; padding: 12px 25px; 
   border-radius: 50px; font-weight: 800; cursor: pointer; transition: 0.3s;
 }
-.radio-btn:hover { background: #d60074; transform: scale(1.05); }
-
-/* --- MODAL --- */
-.modal { position: fixed; inset: 0; background: rgba(0,0,0,0.9); display: none; align-items: center; justify-content: center; z-index: 3000; padding: 20px; }
-.modal.active { display: flex; }
-.modal__panel { background: var(--surface); padding: 35px; border-radius: var(--radius); max-width: 650px; width: 100%; position: relative; border: 1px solid var(--line); }
-.modal__content { display: grid; grid-template-columns: 200px 1fr; gap: 30px; }
-.modal__img { width: 100%; border-radius: 12px; aspect-ratio: 1/1; object-fit: cover; }
-.modal__close { position: absolute; top: 15px; right: 20px; font-size: 35px; background: none; border: none; color: var(--muted); cursor: pointer; }
 
 /* --- RESPONSIVE --- */
 @media (max-width: 850px) {
   .poll-grid { grid-template-columns: 1fr; }
   .modal__content { grid-template-columns: 1fr; text-align: center; }
-  .modal__img { width: 180px; margin: 0 auto; }
   .tabs-grid, .grid-jurado { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 15px; }
   .section__title { font-size: 20px; }
   .nav { display: none; }
-  .brand__name { font-size: 0.9rem; }
+  .hero__img { max-width: 100%; }
 }
