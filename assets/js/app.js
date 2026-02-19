@@ -1,21 +1,20 @@
 /**
  * Especial Viña 2026 - El Epicentro
- * Lógica de carga dinámica optimizada para GitHub Pages
+ * Lógica final optimizada para GitHub Pages (Rutas Absolutas)
  */
 
 const $ = (s) => document.querySelector(s);
 
-// Detectar la ruta base para GitHub Pages
-const base = window.location.pathname.includes('especial-vina-2026') ? '/especial-vina-2026/' : './';
-
+// Configuración de rutas usando la base del repositorio para evitar errores 404
+const BASE_PATH = '/especial-vina-2026/'; 
 const CONFIG = {
   SHEET: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQK-V9ZNN6S14OYLQGFQJ_si0sR7r1kSFmJCgrBC1k6MtCoJuk8ObmJTwiCAeBTbUirne-R-G8d9mqx/pub?gid=0&single=true&output=csv',
-  NEWS: 'assets/data/noticias.json',
-  JURADO: 'assets/data/jurado.json',
-  COMP: 'assets/data/competencia.json'
+  NEWS: BASE_PATH + 'assets/data/noticias.json',
+  JURADO: BASE_PATH + 'assets/data/jurado.json',
+  COMP: BASE_PATH + 'assets/data/competencia.json'
 };
 
-// 1. CARGAR PARRILLA (GOOGLE SHEETS)
+/* --- 1. CARGAR PARRILLA (GOOGLE SHEETS) --- */
 async function initParrilla() {
   const nav = $("#tabsNav");
   const content = $("#tabContent");
@@ -39,6 +38,8 @@ async function initParrilla() {
     });
 
     const dias = Object.keys(schedule);
+    if (dias.length === 0) return;
+
     nav.innerHTML = dias.map((d, i) => 
       `<button class="tab-btn ${i===0?'active':''}" onclick="renderDay('${d}')">${d}</button>`
     ).join('');
@@ -46,7 +47,8 @@ async function initParrilla() {
     window.fullSchedule = schedule;
     renderDay(dias[0]);
   } catch (e) {
-    content.innerHTML = "<p>Programación en actualización...</p>";
+    console.error("Error Parrilla:", e);
+    content.innerHTML = "<p>Cargando programación...</p>";
   }
 }
 
@@ -55,51 +57,48 @@ window.renderDay = (dia) => {
   $("#tabContent").innerHTML = window.fullSchedule[dia].map(art => `
     <div class="card-old">
       <div class="img-square">
-        <img src="${art.img || 'https://via.placeholder.com/300'}" alt="${art.name}" onerror="this.src='https://via.placeholder.com/300?text=Epicentro+Chile'">
+        <img src="${art.img || 'https://via.placeholder.com/300'}" alt="${art.name}" loading="lazy">
       </div>
       <div class="card-body"><h3>${art.name}</h3></div>
     </div>
   `).join('');
 };
 
-// 2. CARGAR NOTICIAS (REFORZADO)
+/* --- 2. CARGAR NOTICIAS (REFORZADO) --- */
 async function initNews() {
   const list = $("#newsList");
   if (!list) return;
 
   try {
-    // Usamos ruta relativa pura para evitar fallos en GitHub
-    const newsPath = 'assets/data/noticias.json';
-    const resp = await fetch(`${newsPath}?v=${Date.now()}`);
-    
-    if (!resp.ok) throw new Error("Archivo no encontrado");
+    const resp = await fetch(`${CONFIG.NEWS}?v=${Date.now()}`);
+    if (!resp.ok) throw new Error("No se pudo cargar el JSON de noticias");
     
     const data = await resp.json();
     
     if (!data.items || data.items.length === 0) {
-      list.innerHTML = "<li>No hay noticias recientes con el tag #vina2026.</li>";
+      list.innerHTML = "<li>No hay noticias disponibles con el tag #vina2026.</li>";
       return;
     }
 
     list.innerHTML = data.items.slice(0, 6).map(n => `
       <li class="news-item">
         <a href="${n.url}" target="_blank" rel="noopener noreferrer">${n.title}</a>
-        <p>${n.excerpt || 'Haz clic para leer más en El Epicentro.'}</p>
+        <p>${n.excerpt || 'Haz clic para leer la nota completa en El Epicentro.'}</p>
       </li>
     `).join('');
   } catch (e) {
-    console.error("Error cargando noticias:", e);
-    list.innerHTML = "<li>Sincronizando notas desde WordPress...</li>";
+    console.error("Fallo en noticias:", e);
+    list.innerHTML = "<li>Sincronizando con la sala de prensa de El Epicentro...</li>";
   }
 }
 
-// 3. CARGAR JURADO
+/* --- 3. CARGAR JURADO --- */
 async function initJurado() {
   const grid = $("#grid");
   if (!grid) return;
 
   try {
-    const resp = await fetch('assets/data/jurado.json');
+    const resp = await fetch(`${CONFIG.JURADO}?v=${Date.now()}`);
     const data = await resp.json();
     window.juradoData = data;
 
@@ -117,13 +116,15 @@ async function initJurado() {
   } catch (e) { console.error("Error Jurado:", e); }
 }
 
-// 4. CARGAR COMPETENCIA
+/* --- 4. CARGAR COMPETENCIA --- */
 async function initCompetencia() {
   const compGrid = $("#compGrid");
   if (!compGrid) return;
 
   try {
-    const resp = await fetch('assets/data/competencia.json?v=' + Date.now());
+    const resp = await fetch(`${CONFIG.COMP}?v=${Date.now()}`);
+    if (!resp.ok) throw new Error("JSON Competencia no encontrado");
+    
     const data = await resp.json();
 
     compGrid.innerHTML = data.map(c => `
@@ -134,17 +135,17 @@ async function initCompetencia() {
           </span>
           <h4>${c.song}</h4>
           <p style="font-size:13px; margin:5px 0;">${c.performer}</p>
-          <small style="font-weight:800; color:var(--muted)">${c.country}</small>
+          <small style="font-weight:800; color:var(--muted); text-transform:uppercase;">${c.country}</small>
         </div>
       </div>
     `).join('');
   } catch (e) {
     console.error("Error Competencia:", e);
-    compGrid.innerHTML = "<p>Próximamente más detalles.</p>";
+    compGrid.innerHTML = "<p>Próximamente participantes confirmados.</p>";
   }
 }
 
-// MODAL LOGIC
+/* --- LÓGICA DE MODAL --- */
 window.openModal = (i) => {
   const j = window.juradoData[i];
   if(!j) return;
@@ -160,7 +161,7 @@ window.closeModal = () => {
   document.body.style.overflow = "auto";
 };
 
-// INICIALIZACIÓN
+/* --- INICIALIZACIÓN --- */
 document.addEventListener("DOMContentLoaded", () => {
   initParrilla();
   initNews();
