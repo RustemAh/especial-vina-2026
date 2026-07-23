@@ -1,6 +1,67 @@
 {
   "source": "https://www.epicentrochile.com/tag/vina2026/",
-  "mode": "error",
-  "generated_at": "2026-07-23T16:09:38.831695+00:00",
-  "items": []
+  "mode": "wp-api",
+  "generated_at": "2026-07-23T17:43:08.226540+00:00",
+  "items": [
+    {
+      "title": "Nico Ruiz lanza “Error Intencional” y apuesta por un giro en su carrera musical",
+      "url": "https://www.epicentrochile.com/2026/04/11/nico-ruiz-lanza-error-intencional-y-apuesta-por-un-giro-en-su-carrera-musical/",
+      "date": "2026-04-11T18:33:52",
+      "excerpt": "El artista penquista presenta un nuevo sencillo con un sonido más sofisticado y una propuesta visual potente, tras su paso por la obertura de Viña 2026...."
+    },
+    {
+      "title": "Estos fueron los 11 shows más vistos del Festival de Viña 2026",
+      "url": "https://www.epicentrochile.com/2026/03/02/estos-fueron-los-11-shows-mas-vistos-del-festival-de-vina-2026/",
+      "date": "2026-03-02T20:54:15",
+      "excerpt": "La organización reveló el ranking oficial de audiencia promedio por minuto de la edición 2026 del Festival de Viña del Mar...."
+    },
+    {
+      "title": "Juanes cautiva al Montruo de la Quinta con una ola de éxitos",
+      "url": "https://www.epicentrochile.com/2026/02/25/juanes-cautiva-al-montruo-de-la-quinta-con-una-ola-de-exitos/",
+      "date": "2026-02-25T22:25:12",
+      "excerpt": "“Tengo tantas memoria de ti Chile”, dijo un emocionado Juanes al público festivalero...."
+    },
+    {
+      "title": "Piare con P debuta en el Festival de Viña del Mar: “Nunca le voy a gustar a todo el mundo”",
+      "url": "https://www.epicentrochile.com/2026/02/25/piare-con-p-debuta-en-el-festival-de-vina-del-mar-nunca-le-voy-a-gustar-a-todo-el-mundo/",
+      "date": "2026-02-25T17:12:04",
+      "excerpt": "La comediante habló de su preparación, las críticas en redes y su tranquilidad antes de subir por primera vez a la Quinta Vergara...."
+    },
+    {
+      "title": "Mon Laferte en Viña 2026: “He aprendido más del fracaso que del éxito”",
+      "url": "https://www.epicentrochile.com/2026/02/25/mon-laferte-en-vina-2026-he-aprendido-mas-del-fracaso-que-del-exito/",
+      "date": "2026-02-25T16:50:19",
+      "excerpt": "La cantante viñamarina reflexionó sobre el fracaso, el éxito y la tristeza en la previa de su regreso a la Quinta Vergara...."
+    },
+    {
+      "title": "Jesse &#038; Joy en Viña 2026: Joy sorprende al iniciar su presentación cantando desde la galería",
+      "url": "https://www.epicentrochile.com/2026/02/24/jesse-joy-en-vina-2026-joy-sorprende-al-iniciar-su-presentacion-cantando-desde-la-galeria/",
+      "date": "2026-02-24T22:40:37",
+      "excerpt": "En su tercera visita al certamen viñamarino, el dúo mexicano decidió romper los esquemas. En lugar de aparecer sobre el escenario, la vocalista emergió entre el..."
+    },
+    {
+      "title": "Asskha Sumathra llega a Viña sin censura: “Voy a ser la de siempre”",
+      "url": "https://www.epicentrochile.com/2026/02/24/asskha-sumathra-llega-a-vina-sin-censura-voy-a-ser-la-de-siempre/",
+      "date": "2026-02-24T17:27:11",
+      "excerpt": "La comediante será la primera transformista en presentarse en la edición 65 del certamen y aseguró que llegará al escenario sin censura ni ánimo de reivindicaci..."
+    },
+    {
+      "title": "Ke Personajes descarta subir con Américo a la Quinta: “Cuando te invitan por primera vez, vas solo”",
+      "url": "https://www.epicentrochile.com/2026/02/24/ke-personajes-descarta-subir-con-americo-a-la-quinta-cuando-te-invitan-por-primera-vez-vas-solo/",
+      "date": "2026-02-24T14:54:26",
+      "excerpt": "El vocalista del grupo argentino cerró los rumores sobre una posible aparición de Américo en su show del miércoles 25 de febrero...."
+    },
+    {
+      "title": "¿Quién es Jesse y quién es Joy? El dúo bromea con su eterna confusión antes de la Quinta Vergara",
+      "url": "https://www.epicentrochile.com/2026/02/24/quien-es-jesse-y-quien-es-joy-el-duo-bromea-con-su-eterna-confusion-antes-de-la-quinta-vergara/",
+      "date": "2026-02-24T12:15:57",
+      "excerpt": "A días de su esperado show en la Quinta Vergara, los hermanos mexicanos abordaron con humor una de las dudas más recurrentes en redes sociales respecto a sus ve..."
+    },
+    {
+      "title": "A las 2 AM y con público reubicado: Bomba Estéreo armó una fiesta total y se llevó todo en la Quinta Vergara",
+      "url": "https://www.epicentrochile.com/2026/02/24/a-las-2-am-y-con-publico-reubicado-bomba-estereo-armo-una-fiesta-total-y-se-llevo-todo-en-la-quinta-vergara/",
+      "date": "2026-02-24T05:08:44",
+      "excerpt": "Pese a salir a escena a las 02:00 de la madrugada y ante una Quinta Vergara con menos público, la banda colombiana armó una verdadera fiesta, invitó a la artist..."
+    }
+  ]
 }
